@@ -26,12 +26,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
- <parent>
-<groupId>com.mycompany.app</groupId>
-<artifactId>app</artifactId>
-<version>1.0-SNAPSHOT</version>
-</parent>
-
+ 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -89,25 +84,7 @@
           <webXml>src/main/webapp/WEB-INF/web.xml</webXml>        
           </configuration>
         </plugin>
-       <plugin>
-         <artifactId>maven-invoker-plugin</artifactId>
-         <version>1.6</version>
-         <configuration>
-            <debug>true</debug>
-            <pomIncludes>
-               <pomInclude>electric/pom.xml</pomInclude>
-            </pomIncludes>
-         </configuration>
-         <executions>
-            <execution>
-               <id>build</id>
-               <goals>
-                  <goal>run</goal>
-               </goals>
-            </execution>
-         </executions>
-         </plugin>
-      </plugins>
+       </plugins>
     </pluginManagement>
   </build>
 </project>
